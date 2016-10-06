@@ -17,7 +17,7 @@ public class Student {
     private int age;
     private String id;
     private LocalDate dob;
-    private ArrayList<Module> modules;
+    private ArrayList<Module> modules = new ArrayList<Module>();
     private CourseProgramme course;
 
 
@@ -83,7 +83,7 @@ public class Student {
     }
 
     public void addModule(Module module) {
-        this.modules.add(module);
+        this.modules.add(0, module);
     }
 
     public CourseProgramme getCourse() {
