@@ -22,6 +22,10 @@ public class CourseProgramme {
 
     public void addModule(Module module) {
         this.modules.add(0, module);
+
+        for(Student student: module.getStudents()) {
+            student.setCourse(this);
+        }
     }
 
     public void removeModule(Module module) {

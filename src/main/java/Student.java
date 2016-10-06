@@ -1,6 +1,8 @@
 import org.joda.time.LocalDate;
 import org.joda.time.Years;
 
+import java.util.ArrayList;
+
 /**
  * Created by Sean Bolton on 24/09/2016.
  * This class manages the student model
@@ -15,6 +17,8 @@ public class Student {
     private int age;
     private String id;
     private LocalDate dob;
+    private ArrayList<Module> modules;
+    private CourseProgramme course;
 
 
     public Student(String firstName,String surname, String id, LocalDate dob) {
@@ -70,5 +74,23 @@ public class Student {
         this.dob = dob;
     }
 
+    public ArrayList<Module> getModules() {
+        return modules;
+    }
 
+    public void setModules(ArrayList<Module> modules) {
+        this.modules = modules;
+    }
+
+    public void addModule(Module module) {
+        this.modules.add(module);
+    }
+
+    public CourseProgramme getCourse() {
+        return course;
+    }
+
+    public void setCourse(CourseProgramme course) {
+        this.course = course;
+    }
 }

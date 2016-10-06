@@ -18,7 +18,8 @@ public class Module {
     }
 
     public void addStudent(Student student) {
-        this.students.add(0, student);
+        this.students.add(student);
+        student.addModule(this);
     }
 
     public void removeStudent(Student student) {
