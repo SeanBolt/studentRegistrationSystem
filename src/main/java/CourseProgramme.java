@@ -11,20 +11,20 @@ public class CourseProgramme {
     private String name;
     private LocalDate startDate;
     private LocalDate endDate;
-    private ArrayList<module> modules;
+    private ArrayList<Module> modules;
 
-    public courseProgramme(String name, LocalDate startDate, LocalDate endDate, ArrayList<module> modules) {
+    public CourseProgramme(String name, LocalDate startDate, LocalDate endDate, ArrayList<Module> modules) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.modules = modules;
     }
 
-    public void addModule(module module) {
+    public void addModule(Module module) {
         this.modules.add(0, module);
     }
 
-    public void removeModule(module module) {
+    public void removeModule(Module module) {
         int index = this.modules.indexOf(module);
         this.modules.remove(index);
     }
@@ -53,11 +53,11 @@ public class CourseProgramme {
         this.endDate = endDate;
     }
 
-    public ArrayList<module> getModules() {
+    public ArrayList<Module> getModules() {
         return modules;
     }
 
-    public void setModules(ArrayList<module> modules) {
+    public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
     }
 }

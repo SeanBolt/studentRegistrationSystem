@@ -9,19 +9,19 @@ public class Module {
 
     private String name;
     private String id;
-    private ArrayList<student> students;
+    private ArrayList<Student> students;
 
-    public module(String name, String id, ArrayList<student> students) {
+    public Module(String name, String id, ArrayList<Student> students) {
         this.name = name;
         this.id = id;
         this.students = students;
     }
 
-    public void addStudent(student student) {
+    public void addStudent(Student student) {
         this.students.add(0, student);
     }
 
-    public void removeStudent(student student) {
+    public void removeStudent(Student student) {
         int index = this.students.indexOf(student);
         this.students.remove(index);
     }
@@ -42,11 +42,11 @@ public class Module {
         this.id = id;
     }
 
-    public ArrayList<student> getStudents() {
+    public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(ArrayList<student> students) {
+    public void setStudents(ArrayList<Student> students) {
         this.students = students;
     }
 }
